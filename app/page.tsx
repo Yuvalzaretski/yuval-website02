@@ -1,56 +1,92 @@
+import Link from "next/link";
 import Image from "next/image";
+import styles from "./page.module.css";
+
+const assignments = [
+  {
+    id: 1,
+    title: "React Tic-Tac-Toe",
+    description:
+      'הטמעתי משחק X-O רספונסיבי עם הדגשת רצפים וחגיגת ניצחון. תרגול מעולה ל-state ו-JSX.',
+    href: "/tic-tac-toe",
+    image: "/images/Tic-Tac-Toe.png",
+  },
+  {
+    id: 2,
+    title: "Met Art Explorer",
+    description:
+      "דף דינמי שמביא יצירות אקראיות מהמטרופוליטן, מטפל בשגיאות ומציג נתונים עשירים.",
+    href: "/art",
+    image: "/images/Art.png",
+  },
+  {
+    id: 3,
+    title: "From Figma to Code",
+    description:
+      "המרת עיצוב מלא לעמוד רספונסיבי כולל התאמות מובייל-דסקטופ ושפה גרפית עקבית.",
+    href: "/design",
+    image: "/images/Design.png",
+  },
+];
 
 export default function Home() {
   return (
-    <main>
-      <div>
-        <h2>Welcome to the Product Jam Starter Kit</h2>
-        <p>
-          Feel free to look around, edit the source code and navigate to the
-          demos.
-        </p>
-        <Image
-          src="/huji.svg"
-          alt="HUJI Logo"
-          width="80"
-          height="80"
-          priority
-        />
-        <Image
-          src="/bezalel.svg"
-          alt="Bezalel Logo"
-          className="item"
-          width="80"
-          height="80"
-          priority
-        />
-        <div>
-          <h2>Lorem Ipsum</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            faucibus sit amet nunc nec vehicula. Fusce ornare nec nulla non
-            imperdiet. Fusce vel sodales justo. Sed efficitur arcu lorem, at
-            iaculis odio ultricies et. Duis rutrum urna nec elit bibendum, sed
-            hendrerit nulla posuere. Vestibulum vestibulum, ante non tincidunt
-            posuere, dui arcu lacinia nisl, nec rhoncus massa arcu ac ipsum. Nam
-            congue interdum tortor, eu dignissim massa scelerisque vitae. Sed
-            ultricies bibendum congue. Praesent non magna id ligula maximus
-            luctus. Donec vitae nibh quis neque luctus sagittis et eget nunc.
-            Aliquam id ullamcorper lacus. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Pellentesque habitant morbi tristique
-            senectus et netus et malesuada fames ac turpis egestas. Curabitur
-            tempor quis dolor a lacinia.
-          </p>
-          <ul>
-            <li>
-              Aliquam maximus tellus sed lacus venenatis, ac cursus eros mollis.
-            </li>
-            <li>In id ante sed sem pharetra molestie et vitae arcu.</li>
-            <li>Cras pharetra turpis at pretium elementum.</li>
-            <li>Donec ultrices felis vel lectus auctor iaculis.</li>
-          </ul>
+    <main className={styles.main}>
+      <section className={styles.hero}>
+        <p className={styles.kicker}>Digital Product Jam · Due Nov 19</p>
+        <h1>Digital Product Jam assignment 2</h1>
+        <div className={styles.logoRow}>
+          <Image
+            src="/huji.svg"
+            alt="HUJI Logo"
+            width={90}
+            height={90}
+            priority
+          />
+          <Image
+            src="/bezalel.svg"
+            alt="Bezalel Logo"
+            width={90}
+            height={90}
+            priority
+          />
         </div>
-      </div>
+      </section>
+
+      <section className={styles.assignments}>
+        <h2 className={styles.assignmentsTitle}>Tasks</h2>
+        <div className={styles.assignmentGrid}>
+          {assignments
+            .slice()
+            .reverse()
+            .map((assignment, position) => {
+              const partNumber = assignments.length - position;
+              return (
+            <article key={assignment.id} className={styles.assignmentCard}>
+              <div className={styles.assignmentImageWrapper}>
+                <Image
+                  src={assignment.image}
+                  alt={assignment.title}
+                  width={320}
+                  height={200}
+                  className={styles.assignmentImage}
+                />
+                <span className={styles.assignmentBadge}>
+                  חלק {partNumber}
+                </span>
+              </div>
+              <div className={styles.assignmentBody}>
+                <h3>{assignment.title}</h3>
+                <p>{assignment.description}</p>
+                <Link href={assignment.href} className={styles.assignmentLink}>
+                  למעבר לחלק {partNumber}
+                </Link>
+              </div>
+            </article>
+          );
+        })}
+        </div>
+      </section>
     </main>
   );
 }

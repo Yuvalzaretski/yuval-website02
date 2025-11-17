@@ -1,3 +1,7 @@
+קישור לפיגמה של המעצב - https://www.figma.com/design/xzh2fZqiaNtkeIcYALvBay/Untitled?node-id=11-19&t=VX6FtHT2OkRRW7ZM-1
+
+
+
 # Starter Kit
 
 This is a Starter Kit for the Digital Product Jam course. It provides a

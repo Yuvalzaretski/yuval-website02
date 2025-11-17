@@ -1,0 +1,7 @@
+/* Remove spacing from layout wrapper div for design page */
+body > div > div:has([class*="container"]) {
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+}
+

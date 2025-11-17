@@ -9,29 +9,27 @@ export const metadata: Metadata = {
   title: "Digital Product Jam Starter Kit",
   description:
     "A starter kit for wiritng code in the Digital Product Jam course.",
-};
+}; 
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html>
       <head>
-        {/* Browser Favicon */}
-        <link rel="icon" href="/icons/favicon.png" />
-        {/* Apple Icon */}
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/icons/icon-180.png"
-        />
-        {/* Android Icon */}
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="192x192"
-          href="/icons/icon-192.png"
-        />
-        <link rel="manifest" href="/manifest.json" />
-        <script src="https://accounts.google.com/gsi/client" async></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/icons/favicon.png" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/icons/icon-180.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="/icons/icon-192.png"
+      />
+      <link rel="manifest" href="/manifest.json" />
+      <script src="https://accounts.google.com/gsi/client" async></script>
       </head>
       <body>
         <Navbar />

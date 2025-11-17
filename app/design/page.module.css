@@ -1,0 +1,599 @@
+/* HERO SECTION */
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  direction: rtl;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.heroImageBox {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 11 / 10;
+  background: url('/images/hero-leaf.png') center / cover no-repeat;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.textOverlay {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.2rem;
+  text-align: right;
+}
+
+.title {
+  font-family: 'MuseumAAA', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #426C3E;
+  line-height: 2.4rem;
+  letter-spacing: -0.04rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-family: 'NarkisBlockStudio', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #426C3E;
+  line-height: 1.2rem;
+  margin: 0.2rem 0 0 0;
+}
+
+
+/* ========================================================= */
+/* INFO SECTION A */
+/* ========================================================= */
+
+.infoSectionA {
+  background-color: #eeffd4;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.infoWrapperA {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  direction: rtl;
+  flex-wrap: nowrap;
+}
+
+.textBoxA {
+  max-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.textA {
+  font-family: 'NarkisBlockStudio', sans-serif;
+  font-size: 0.9rem;
+  color: #426c3e;
+  line-height: 1.2;
+  margin: 0;
+  text-align: right;
+}
+
+.iconA {
+  margin-top: 1rem;
+  align-self: flex-start;
+  width: 2.5rem;
+  height: auto;
+}
+
+.imageContainerA {
+  width: 16rem;
+  height: 20rem;
+  border-radius: 2.4375rem;
+  border: 1px solid #970970;
+  overflow: hidden;
+  background: #d9d9d9 center / cover no-repeat;
+  flex-shrink: 0;
+}
+
+.imageA {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ========================================================= */
+/* RESPONSIVE A */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+  .infoWrapperA {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+  }
+
+  .textBoxA {
+    max-width: 30%;
+  }
+
+  .textA {
+    font-size: 0.8125rem;
+    line-height: 0.875rem;
+    font-weight: 400;
+    text-align: right;
+  }
+
+  .iconA {
+    width: 70px;
+    margin-right: 25px;
+  }
+
+  .imageContainerA {
+    width: 14rem;
+    height: 18rem;
+    border-radius: 2rem;
+  }
+}
+
+
+/* ========================================================= */
+/* INFO SECTION B */
+/* ========================================================= */
+
+.infoSectionB {
+  background-color: #eeffd4;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.infoWrapperB {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  direction: rtl;
+  flex-wrap: nowrap;
+}
+
+.textBoxB {
+  max-width: 22rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.subtitleTextB {
+  font-family: 'MuseumAAA', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #426c3e;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  text-align: right;
+}
+
+.boldTextB {
+  display: inline-block;
+  max-width: 22rem;
+  white-space: normal;
+  text-align: right;
+}
+.textB {
+  font-family: 'NarkisBlockStudio', sans-serif;
+  font-size: 0.10rem;
+  font-weight: 400;
+  color: #426c3e;
+  line-height: 1.2;
+  margin: 0;
+  text-align: right;
+}
+
+.iconB {
+  margin-top: 1rem;
+  align-self: flex-start;
+  width: 2.5rem;
+  height: auto;
+}
+
+.imageContainerB {
+  width: 16rem;
+  height: 20rem;
+  border-radius: 2.4375rem;
+  border: 1px solid #970970;
+  overflow: hidden;
+  background: #d9d9d9 center / cover no-repeat;
+  flex-shrink: 0;
+}
+
+.imageB {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ========================================================= */
+/* RESPONSIVE B */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+  .infoWrapperB {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .textBoxB {
+    max-width: 90%;
+    width: 90%;
+  }
+
+  .boldTextB {
+    max-width: 90%;
+  }
+
+  .textB {
+    font-size: 0.8125rem;
+    line-height: 0.875rem;
+    font-weight: 400;
+    text-align: right;
+  }
+
+  .iconB {
+    width: 70px;
+    margin-right: 25px;
+  }
+
+  .imageContainerB {
+    width: 14rem;
+    height: 18rem;
+    border-radius: 2rem;
+  }
+}
+
+
+/* ========================================================= */
+/* INFO SECTION C */
+/* ========================================================= */
+
+.infoSectionC {
+  background-color: #eeffd4;
+  padding: 1rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.infoWrapperC {
+  display: flex;
+  flex-direction: row-reverse; 
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  direction: rtl;
+  flex-wrap: nowrap;
+}
+
+.textBoxC {
+  max-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  align-items: flex-start;
+}
+
+.subtitleTextC {
+  font-family: 'MuseumAAA', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #426c3e;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+  text-align: right;
+}
+
+.boldTextC {
+  font-weight: bold;
+}
+
+.textC {
+  font-family: 'NarkisBlockStudio', sans-serif;
+  font-size: 10rem;
+  color: #426c3e;
+  line-height: 1.2;
+  margin: 0;
+  text-align: right;
+}
+
+.iconC {
+  margin-top: 1rem;
+  align-self: flex-start;
+  width: 2.5rem;
+  height: auto;
+}
+
+.imageContainerC {
+  width: 16rem;
+  height: 20rem;
+  border-radius: 2.4375rem;
+  border: 1px solid #970970;
+  overflow: hidden;
+  background: #d9d9d9 center / cover no-repeat;
+  flex-shrink: 0;
+}
+
+.imageC {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* ========================================================= */
+/* RESPONSIVE C */
+/* ========================================================= */
+
+@media (max-width: 768px) {
+  .infoWrapperC {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .textBoxC {
+    max-width: 40%;
+  }
+
+  .textC {
+    font-size: 0.8125rem;
+    line-height: 0.875rem;
+  }
+
+  .iconC {
+    width: 70px;
+    margin-right: 25px;
+  }
+
+  .imageContainerC {
+    width: 14rem;
+    height: 18rem;
+    border-radius: 2rem;
+  }
+}
+
+
+/* ========================================================= */
+/* SECTION D — GALLERY */
+/* ========================================================= */
+
+.communitySection {
+  background-color: #eeffd4;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.communityTitle {
+  font-family: 'MuseumAAA', sans-serif;
+  font-size: 0.9rem;
+  color: #426c3e;
+  margin-bottom: 1.5rem;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.galleryImage {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .galleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .galleryImage {
+    border-radius: 0.8rem;
+    aspect-ratio: 3 / 4;
+  }
+
+  .communityTitle {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ============================
+   SECTION E – REVIEWS 
+   ============================ */
+
+.reviewsSection {
+  background-color: #eeffd4;
+  padding: 1rem 1rem 0rem;
+  text-align: center;
+}
+
+.reviewsTitle {
+  font-family: 'MuseumAAA', sans-serif;
+  font-size: 0.9rem;
+  color: #426c3e; 
+  margin-bottom: 1rem;
+}
+
+.reviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 1rem;
+  margin-bottom: 0.2rem;
+}
+
+.reviewCard {
+  width: 6.75rem;
+  height: 11.25rem;
+  border-radius: 1.875rem;
+  border: 0.5px solid #970970;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.reviewsIcons {
+  display: flex;
+  justify-content: center;
+  gap: 4.5rem;
+  margin-top: 0rem;
+}
+
+.reviewIcon {
+  width: 2.8rem;
+  height: auto;
+}
+
+/* ========================================================= */
+/* DESKTOP ENHANCEMENTS                                     */
+/* ========================================================= */
+
+@media (min-width: 1024px) {
+  .heroContainer {
+    align-items: stretch;
+    padding: 0;
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+  }
+
+  .heroImageBox {
+    width: 100%;
+    height: clamp(24rem, 55vw, 48rem);
+    min-height: 28rem;
+    border-radius: 0;
+  }
+
+  .textOverlay {
+    top: 3rem;
+    right: 3rem;
+  }
+
+  .title {
+    font-size: 4rem;
+    line-height: 1.05;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .infoSectionA,
+  .infoSectionB,
+  .infoSectionC {
+    padding: 4rem 2rem;
+  }
+
+  .infoWrapperA,
+  .infoWrapperB,
+  .infoWrapperC {
+    gap: 4rem;
+    align-items: stretch;
+  }
+
+  .textBoxA,
+  .textBoxB,
+  .textBoxC {
+    max-width: 32rem;
+  }
+
+  .textA,
+  .textB,
+  .textC {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+
+  .iconA,
+  .iconB,
+  .iconC {
+    width: 4rem;
+    margin-top: 2rem;
+  }
+
+  .imageContainerA,
+  .imageContainerB,
+  .imageContainerC {
+    width: 22rem;
+    height: 28rem;
+    border-radius: 3rem;
+  }
+
+  .subtitleTextB,
+  .subtitleTextC {
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  .communitySection,
+  .reviewsSection {
+    padding: 4rem 2rem;
+  }
+
+  .communityTitle,
+  .reviewsTitle {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 72rem;
+  }
+
+  .galleryImage {
+    border-radius: 2rem;
+  }
+
+  .reviewsGrid {
+    grid-template-columns: repeat(3, minmax(12rem, 1fr));
+    gap: 2rem;
+  }
+
+  .reviewCard {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 5;
+    border: none;
+  }
+
+  .reviewsIcons {
+    gap: 5.5rem;
+    margin-top: 2rem;
+  }
+
+  .reviewIcon {
+    width: 4rem;
+  }
+}
+
+

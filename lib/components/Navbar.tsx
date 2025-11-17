@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { APP_NAME, COURSE_GITHUB, DEMOS_ENABLED } from "../config";
+import { APP_NAME } from "../config";
 
 export default function Navbar() {
   return (
@@ -9,10 +9,9 @@ export default function Navbar() {
       </h1>
       <nav>
         <Link href="/">Home</Link>
-        <Link href={COURSE_GITHUB} target="_blank">
-          GitHub
-        </Link>
-        {DEMOS_ENABLED ? <Link href="/demos">Demos</Link> : null}
+        <Link href="/tic-tac-toe">Tic-Tac-Toe</Link>
+        <Link href="/art">Art</Link>
+        <Link href="/design">Design</Link>
       </nav>
     </header>
   );

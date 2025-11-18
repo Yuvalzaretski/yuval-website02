@@ -9,7 +9,13 @@ type ArtItem = {
   primaryImageSmall: string;
   objectDate: string;
   medium: string;
-  country: string;
+  period?: string;
+  culture?: string;
+  dimensions?: string;
+  classification?: string;
+  creditLine?: string;
+  objectNumber?: string;
+  department?: string;
 };
 
 type Department = {
@@ -70,12 +76,27 @@ export default function ArtPage() {
       <div className={styles.gallery}>
         {artworks.map((art) => (
           <div key={art.objectID} className={styles.card}>
-            {art.primaryImageSmall && <img src={art.primaryImageSmall} alt={art.title} />}
-            <h2>{art.title}</h2>
-            <p><strong>Artist:</strong> {art.artistDisplayName || 'Unknown'}</p>
-            <p><strong>Date:</strong> {art.objectDate}</p>
-            <p><strong>Medium:</strong> {art.medium}</p>
-            <p><strong>Country:</strong> {art.country}</p>
+            <div className={styles.imageContainer}>
+              {art.primaryImageSmall ? (
+                <img src={art.primaryImageSmall} alt={art.title} />
+              ) : (
+                <div className={styles.placeholderImage}>
+                  <span>No Image Available</span>
+                </div>
+              )}
+            </div>
+            <div className={styles.cardContent}>
+              <h2>{art.title}</h2>
+              <div className={styles.detailGroup}>
+                {art.artistDisplayName && (
+                  <p><strong>Artist:</strong> {art.artistDisplayName}</p>
+                )}
+                {art.objectDate && <p><strong>Date:</strong> {art.objectDate}</p>}
+                {art.medium && <p><strong>Medium:</strong> {art.medium}</p>}
+                {art.period && <p><strong>Period:</strong> {art.period}</p>}
+                {art.culture && <p><strong>Culture:</strong> {art.culture}</p>}
+              </div>
+            </div>
           </div>
         ))}
       </div>
